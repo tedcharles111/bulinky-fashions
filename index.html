@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bulinky | Premium Fashion Brand</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Floating Cart Icon -->
+  <div class="floating-cart" id="floatingCart">
+    <i class="fas fa-shopping-bag"></i>
+    <span class="cart-count" id="cartCount">0</span>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <span class="logo-text">BULINKY</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#collections">Collections</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="search-btn"><i class="fas fa-search"></i></button>
+        <button class="cart-btn" id="cartBtn"><i class="fas fa-shopping-bag"></i></button>
+        <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul class="mobile-nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#collections">Collections</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">Elevate Your Style with Bulinky</h1>
+        <p class="hero-subtitle">Discover the perfect blend of elegance and modern fashion. Crafted for those who dare to stand out.</p>
+        <div class="hero-cta">
+          <a href="#collections" class="btn btn-primary">Shop Now</a>
+          <a href="#about" class="btn btn-secondary">Learn More</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Fashion Model" class="hero-img">
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll to Explore</span>
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- Featured Categories -->
+  <section class="featured-categories">
+    <div class="container">
+      <h2 class="section-title">Featured Categories</h2>
+      <div class="categories-grid">
+        <div class="category-card" data-category="men">
+          <div class="category-image">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Men's Fashion">
+          </div>
+          <div class="category-overlay">
+            <h3>Men's Collection</h3>
+            <p>Discover our latest men's fashion</p>
+          </div>
+        </div>
+        <div class="category-card" data-category="women">
+          <div class="category-image">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Women's Fashion">
+          </div>
+          <div class="category-overlay">
+            <h3>Women's Collection</h3>
+            <p>Explore elegant women's wear</p>
+          </div>
+        </div>
+        <div class="category-card" data-category="accessories">
+          <div class="category-image">
+            <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Accessories">
+          </div>
+          <div class="category-overlay">
+            <h3>Accessories</h3>
+            <p>Complete your look with our accessories</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- New Arrivals -->
+  <section id="collections" class="new-arrivals">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">New Arrivals</h2>
+        <div class="filter-tabs">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="men">Men</button>
+          <button class="filter-btn" data-filter="women">Women</button>
+          <button class="filter-btn" data-filter="accessories">Accessories</button>
+        </div>
+      </div>
+      <div class="products-grid" id="productsGrid">
+        <!-- Products will be dynamically loaded here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Best Sellers -->
+  <section class="best-sellers">
+    <div class="container">
+      <h2 class="section-title">Best Sellers</h2>
+      <div class="best-sellers-grid">
+        <div class="product-card featured">
+          <div class="product-badge">Best Seller</div>
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80" alt="Leather Jacket">
+          </div>
+          <div class="product-info">
+            <h3>Premium Leather Jacket</h3>
+            <p class="product-price">$299.99</p>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span>(4.7)</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card featured">
+          <div class="product-badge">Trending</div>
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Designer Handbag">
+          </div>
+          <div class="product-info">
+            <h3>Designer Handbag</h3>
+            <p class="product-price">$199.99</p>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <span>(4.5)</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card featured">
+          <div class="product-badge">New</div>
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1412&q=80" alt="Sneakers">
+          </div>
+          <div class="product-info">
+            <h3>Limited Edition Sneakers</h3>
+            <p class="product-price">$149.99</p>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span>(5.0)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Fashion Store">
+        </div>
+        <div class="about-text">
+          <h2 class="section-title">About Bulinky</h2>
+          <p class="about-description">
+            Founded in 2010, Bulinky has been at the forefront of fashion innovation, blending classic elegance with modern trends.
+            Our mission is to empower individuals to express their unique style through high-quality, thoughtfully designed clothing.
+          </p>
+          <div class="about-features">
+            <div class="feature-item">
+              <i class="fas fa-shipping-fast"></i>
+              <div class="feature-text">
+                <h4>Free Shipping</h4>
+                <p>On all orders over $100</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-undo"></i>
+              <div class="feature-text">
+                <h4>Easy Returns</h4>
+                <p>30-day return policy</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-lock"></i>
+              <div class="feature-text">
+                <h4>Secure Payment</h4>
+                <p>100% secure checkout</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <div class="container">
+      <h2 class="section-title">What Our Customers Say</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-avatar">
+            <img src="https://i.pravatar.cc/150?img=1" alt="Customer 1">
+          </div>
+          <div class="testimonial-content">
+            <p>"Bulinky's collection is simply amazing. The quality and style are unmatched. I always find something perfect for every occasion."</p>
+            <h4>Sarah Johnson</h4>
+            <p class="testimonial-role">Fashion Blogger</p>
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-avatar">
+            <img src="https://i.pravatar.cc/150?img=2" alt="Customer 2">
+          </div>
+          <div class="testimonial-content">
+            <p>"The attention to detail in every piece is incredible. Bulinky has become my go-to brand for all my fashion needs."</p>
+            <h4>Michael Chen</h4>
+            <p class="testimonial-role">Entrepreneur</p>
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-avatar">
+            <img src="https://i.pravatar.cc/150?img=3" alt="Customer 3">
+          </div>
+          <div class="testimonial-content">
+            <p>"I love how Bulinky combines comfort with style. Their clothes make me feel confident and stylish every day."</p>
+            <h4>Emily Rodriguez</h4>
+            <p class="testimonial-role">Marketing Manager</p>
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <div class="container">
+      <div class="newsletter-content">
+        <h2 class="section-title">Stay Updated</h2>
+        <p>Subscribe to our newsletter for exclusive offers and fashion tips.</p>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cart Sidebar -->
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button class="close-cart" id="closeCart">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <!-- Cart items will be dynamically loaded here -->
+      <div class="empty-cart">
+        <i class="fas fa-shopping-bag"></i>
+        <p>Your cart is empty</p>
+      </div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <p>Total:</p>
+        <p class="total-amount" id="cartTotal">$0.00</p>
+      </div>
+      <button class="btn btn-primary checkout-btn">Checkout</button>
+    </div>
+  </div>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3 class="logo-text">BULINKY</h3>
+          <p>Premium fashion for the modern individual. Elevate your style with our curated collections.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Best Sellers</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>About</h4>
+          <ul>
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 Bulinky. All rights reserved.</p>
+        <div class="payment-icons">
+          <i class="fab fa-cc-visa"></i>
+          <i class="fab fa-cc-mastercard"></i>
+          <i class="fab fa-cc-paypal"></i>
+          <i class="fab fa-cc-apple-pay"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
